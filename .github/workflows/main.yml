@@ -1,24 +1,21 @@
-name: FTP Deploy
-
-on:
-  push:
-    branches:
-      - main  # Run this action when code is pushed to the 'main' branch
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  ftp-deploy:
-    name: Deploy to FTP
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository content
-      uses: actions/checkout@v3
-
-    - name: Upload files via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.4.0
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./  # The directory to upload (root folder by default)
         server-dir: /traez  # Remote directory on FTP server (adjust if needed)
+
+
+
