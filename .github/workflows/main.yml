@@ -15,7 +15,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./  # The directory to upload (root folder by default)
-        server-dir: /traez  # Remote directory on FTP server (adjust if needed)
+        server-dir: /traez/  # Remote directory on FTP server (adjust if needed)
 
 
 
