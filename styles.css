@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid black;
+  utline: 1px solid black;
 }
 body {
   font-family: Arial, sans-serif;
@@ -13,10 +13,18 @@ body {
   align-items: center;
   height: 100vh;
   background-color: lightblue; /* Initial color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column; 
 }
 
 .container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
 }
 
 button {
